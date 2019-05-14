@@ -1,0 +1,85 @@
+hello
+
+History
+Bjarne Stroustrup, the creator of C++
+
+In 1979, Bjarne Stroustrup, a Danish computer scientist, began work on the predecessor to C++, "C with Classes".[8] The motivation for creating a new language originated from Stroustrup's experience in programming for his Ph.D. thesis. Stroustrup found that Simula had features that were very helpful for large software development, but the language was too slow for practical use, while BCPL was fast but too low-level to be suitable for large software development. When Stroustrup started working in AT&T Bell Labs, he had the problem of analyzing the UNIX kernel with respect to distributed computing. Remembering his Ph.D. experience, Stroustrup set out to enhance the C language with Simula-like features.[9] C was chosen because it was general-purpose, fast, portable and widely used. As well as C and Simula's influences, other languages also influenced C++, including ALGOL 68, Ada, CLU and ML.
+
+Initially, Stroustrup's "C with Classes" added features to the C compiler, Cpre, including classes, derived classes, strong typing, inlining and default arguments.[10]
+
+In 1983, C with Classes was renamed to C++ ("++" being the increment operator in C), adding new features that included virtual functions, function name and operator overloading, references, constants, type-safe free-store memory allocation (new/delete), improved type checking, and BCPL style single-line comments with two forward slashes (//). Furthermore, it included the development of a standalone compiler for C++, Cfront.
+
+In 1985, the first edition of The C++ Programming Language was released, which became the definitive reference for the language, as there was not yet an official standard.[11] The first commercial implementation of C++ was released in October of the same year.[8]
+
+In 1989, C++ 2.0 was released, followed by the updated second edition of The C++ Programming Language in 1991.[12] New features in 2.0 included multiple inheritance, abstract classes, static member functions, const member functions, and protected members. In 1990, The Annotated C++ Reference Manual was published. This work became the basis for the future standard. Later feature additions included templates, exceptions, namespaces, new casts, and a boolean type.
+
+After the 2.0 update, C++ evolved relatively slowly until, in 2011, the C++11 standard was released, adding numerous new features, enlarging the standard library further, and providing more facilities to C++ programmers. After a minor C++14 update released in December 2014, various new additions are planned for 2017 and 2020.[13]
+Etymology
+
+According to Stroustrup: "the name signifies the evolutionary nature of the changes from C".[14] This name is credited to Rick Mascitti (mid-1983)[10] and was first used in December 1983. When Mascitti was questioned informally in 1992 about the naming, he indicated that it was given in a tongue-in-cheek spirit. The name comes from C's "++" operator (which increments the value of a variable) and a common naming convention of using "+" to indicate an enhanced computer program.
+
+During C++'s development period, the language had been referred to as "new C" and "C with Classes"[10][15] before acquiring its final name.
+Philosophy
+
+Throughout C++'s life, its development and evolution has been informally governed by a set of rules that its evolution should follow:[9]
+
+
+Standardization
+Year 	C++ Standard 	Informal name
+1998 	ISO/IEC 14882:1998[16] 	C++98
+2003 	ISO/IEC 14882:2003[17] 	C++03
+2011 	ISO/IEC 14882:2011[7] 	C++11
+2014 	ISO/IEC 14882:2014[18] 	C++14
+2017 	to be determined 	C++17
+2020 	to be determined 	C++20[13]
+
+C++ is standardized by an ISO working group known as JTC1/SC22/WG21. So far, it has published four revisions of the C++ standard and is currently working on the next revision, C++17.
+
+In 1998, the ISO working group standardized C++ for the first time as ISO/IEC 14882:1998, which is informally known as C++98. In 2003, it published a new version of the C++ standard called ISO/IEC 14882:2003, which fixed problems identified in C++98.
+
+The next major revision of the standard was informally referred to as "C++0x", but it was not released until 2011.[19] C++11 (14882:2011) included many additions to both the core language and the standard library.[7]
+
+In 2014, C++14 (also known as C++1y) was released as a small extension to C++11, featuring mainly bug fixes and small improvements.[20] The Draft International Standard ballot procedures completed in mid-August 2014.[21]
+
+After C++14, a major revision, informally known as C++17 or C++1z, is planned for 2017,[20] which is almost feature-complete.[22]
+
+As part of the standardization process, ISO also publishes technical reports and specifications:
+
+    ISO/IEC TR 18015:2006[23] on the use of C++ in embedded systems and on performance implications of C++ language and library features,
+    ISO/IEC TR 19768:2007[24] (also known as the C++ Technical Report 1) on library extensions mostly integrated into C++11,
+    ISO/IEC TR 29124:2010[25] on special mathematical functions,
+    ISO/IEC TR 24733:2011[26] on decimal floating point arithmetic,
+    ISO/IEC TS 18822:2015[27] on the standard filesystem library,
+    ISO/IEC TS 19570:2015[28] on parallel versions of the standard library algorithms,
+    ISO/IEC TS 19841:2015[29] on software transactional memory,
+    ISO/IEC TS 19568:2015[30] on a new set of library extensions, some of which are already integrated into C++17,
+    ISO/IEC TS 19217:2015[31] on the C++ Concepts
+
+More technical specifications are in development and pending approval, including concurrency library extensions, a networking standard library, ranges, and modules.[32]
+Language
+
+The C++ language has two main components: a direct mapping of hardware features provided primarily by the C subset, and zero-overhead abstractions based on those mappings. Stroustrup describes C++ as "a light-weight abstraction programming language [designed] for building and using efficient and elegant abstractions";[5] and "offering both hardware access and abstraction is the basis of C++. Doing it efficiently is what distinguishes it from other languages".[33]
+
+C++ inherits most of C's syntax. The following is Bjarne Stroustrup's version of the Hello world program that uses the C++ Standard Library stream  facility to write a message to standard output:[34][35]
+
+Within functions that define a non-void return type, failure to return a value before control reaches the end of the function results in undefined behaviour (compilers typically provide the means to issue a diagnostic in such a case).[36] The sole exception to this rule is the main function, which implicitly returns a value of zero.[37]
+Object storage
+
+As in C, C++ supports four types of memory management: static storage duration objects, thread storage duration objects, automatic storage duration objects, and dynamic storage duration objects.[38]
+Static storage duration objects
+
+Static storage duration objects are created before main() is entered (see exceptions below) and destroyed in reverse order of creation after main() exits. The exact order of creation is not specified by the standard (though there are some rules defined below) to allow implementations some freedom in how to organize their implementation. More formally, objects of this type have a lifespan that "shall last for the duration of the program".[39]
+
+Static storage duration objects are initialized in two phases. First, "static initialization" is performed, and only after all static initialization is performed, "dynamic initialization" is performed. In static initialization, all objects are first initialized with zeros; after that, all objects that have a constant initialization phase are initialized with the constant expression (i.e. variables initialized with a literal or constexpr). Though it is not specified in the standard, the static initialization phase can be completed at compile time and saved in the data partition of the executable. Dynamic initialization involves all object initialization done via a constructor or function call (unless the function is marked with constexpr, in C++11). The dynamic initialization order is defined as the order of declaration within the compilation unit (i.e. the same file). No guarantees are provided about the order of initialization between compilation units.
+Thread storage duration objects
+
+Variables of this type are very similar to static storage duration objects. The main difference is the creation time is just prior to thread creation and destruction is done after the thread has been joined.[40]
+Automatic storage duration objects
+
+The most common variable types in C++ are local variables inside a function or block, and temporary variables.[41] The common feature about automatic variables is that they have a lifetime that is limited to the scope of the variable. They are created and potentially initialized at the point of declaration (see below for details) and destroyed in the reverse order of creation when the scope is left.
+
+Local variables are created as the point of execution passes the declaration point. If the variable has a constructor or initializer this is used to define the initial state of the object. Local variables are destroyed when the local block or function that they are declared in is closed. C++ destructors for local variables are called at the end of the object lifetime, allowing a discipline for automatic resource management termed RAII, which is widely used in C++.
+
+Member variables are created when the parent object is created. Array members are initialized from 0 to the last member of the array in order. Member variables are destroyed when the parent object is destroyed in the reverse order of creation. i.e. If the parent is an "automatic object" then it will be destroyed when it goes out of scope which triggers the destruction of all its members.
+
+Temporary variables are created as the result of expression evaluation and are destroyed when the statement containing the expression has been fully evaluated (usually at the at the end of a statement).

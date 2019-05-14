@@ -1,0 +1,78 @@
+2016-11-16      TDP004      lektion!    15:15-17:00
+___________________________________________________
+
+uppgift 1:
+___________________________________________________
+
+// *.h
+
+class Fordon
+{
+public:
+    fordon(int h, int t);    
+    
+private:
+    int hjul{};
+    int tophastighet{};
+};
+
+class Passagerarfordon : public Fordon
+{
+public:
+    int addera();
+    int subtrahera();
+
+private:
+    int sittplatser{};
+};
+
+class Fraktfordon : public Fordon
+{
+public: 
+    int lasta_pa();
+    int lasta_av();
+
+private:
+    int maxlast{};
+};
+
+
+___________________________________________________
+
+uppgift 2:
+___________________________________________________
+
+// *.cc 
+
+Fordon::Fordon(int h, int t)
+{
+    hjul = h;
+    tophastighet = t;
+    if (hjul > 6 && tophastighet > 100)
+    {
+        tophastighet = 100;
+    }
+}
+
+___________________________________________________
+
+uppgift 3:
+___________________________________________________
+
+virtual string description()
+{
+    return "fordon";
+}
+
+
+passagerarfordon.desc:: 
+
+public:
+    string description()
+    {
+        return "passagerarfordon";
+    }
+};
+
+
+

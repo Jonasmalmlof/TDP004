@@ -1,0 +1,60 @@
+2016-11-16          TDP004      Lektion Pass 2.
+
+Bibliotek
+
+Bok:
+titel
+författare
+# sidor
+genre
+ISBN
+Årtal
+Utgivare
+# Låntagare
+# Kopior
+Betyg
+
+Film:
+Titel
+Längd
+Regisör
+Skådespelare
+betyg
+Åldersgärns
+Årtal
+Genre
+# Låntagare
+# Kopior
+
+Media:
+Titel
+Årtal
+# Låntagare
+# Kopior
+# Genre
+Betyg
+
+
+------------------------------------------------------------------------
+KOD
+------------------------------------------------------------------------
+
+Class Book {
+public:
+    
+    
+private:
+
+}
+
+// media.h
+
+#ifndef MEDIA_H
+#define MEDIA_H
+
+
+
+
+
+
+#endif

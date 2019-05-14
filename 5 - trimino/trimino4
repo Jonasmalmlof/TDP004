@@ -1,0 +1,13 @@
+1 2 3 Tre korrekta
+6 4 5
+8 9 7
+3 2 1 Tre med fel ordning
+4 6 5
+8 7 9
+1 2 a Tre ogiltiga brickor
+4 b 6
+c 8 9
+                  1    2        3 Korrekt
+         4        6    5 Fel ordning
+            7                8 Ogiltig
+9 Ogiltig

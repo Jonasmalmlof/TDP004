@@ -1,0 +1,20 @@
+#include <string>
+#include <map>
+#include <iostream>
+
+int main()
+{
+
+    const map<char, int> m{{'I',1},
+                            {'V', 5},
+                            {'X'}, 10}};
+
+    int last {};
+    string roman = "XIV";
+    for ( char c: roman) {
+        result += m.at(c);
+        if(last <m.at(c))
+            { result -= 2* last; }
+        last = m.at(c);
+}
+                

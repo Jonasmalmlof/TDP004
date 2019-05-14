@@ -1,0 +1,35 @@
+
+# quick tests if a move will *NOT* collide with a rect
+# line specified as: will_not_collide  x y w h  x y  x y w h  bool
+
+will_not_collide  300 20 40 400   13  50  500 237 30 30  f
+will_not_collide  300 20 40 400  500 237   13  50 30 30  f
+
+will_not_collide  30 200 400 40   13  50  500 237 30 30  f
+will_not_collide  30 200 400 40  500 237   13  50 30 30  f
+
+will_not_collide  30 200 298 40   13  50  500 237 30 30  f
+will_not_collide  30 200 298 40  500 237   13  50 30 30  f
+
+will_not_collide  30 200 297 40   13  50  500 237 30 30  f
+will_not_collide  30 200 297 40  500 237   13  50 30 30  f
+
+will_not_collide  30 270 297 40   13  50  500 237 30 30  t
+will_not_collide  30 270 297 40  500 237   13  50 30 30  t
+
+
+#########################################################
+# slow calculation where (if) a move *WILL* collide with a rect
+# line specified as: will_not_collide  x y w h  x y  x y w h  bool
+
+collision_point  300 20 40 400   13  50  500 237 30 30  t
+collision_point  300 20 40 400  500 237   13  50 30 30  t
+
+collision_point  30 200 400 40   13  50  500 237 30 30  t
+collision_point  30 200 400 40  500 237   13  50 30 30  t
+
+collision_point  30 200 298 40   13  50  500 237 30 30  t
+collision_point  30 200 298 40  500 237   13  50 30 30  t
+
+collision_point  30 200 297 40   13  50  500 237 30 30  f
+collision_point  30 200 297 40  500 237   13  50 30 30  f
